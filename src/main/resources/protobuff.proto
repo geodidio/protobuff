@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option java_package = "com.acc.grpc";
+option java_outer_classname = "UserProto";
+
+// Definição da mensagem User
+message Company {
+    int32 id = 1;
+    string company = 2;
+    string location = 3;
+}
+
+// response
+message Response {
+    string message = 1;
+}
+
+
+message CompanyRequest {
+    double amount = 1;
+    string name = 2;
+    int32 rank = 3;
+
+
+}
+
+message CreateCompanyRequest {
+    string name = 1;
+    string location = 2;
+}
+
+// Service define ...
+service CompanyService {
+    // method user to retrieve the tax he used ...
+    rpc GetTax (CompanyRequest) returns (Response);
+
+    // method to create company
+    rpc CreateCompany (CreateCompanyRequest) returns (Response);
+}
