@@ -1,1 +1,1 @@
-This is a protobuf project to generate protobuf stubs.
+This is a protobuf project to generate protobuff stubs.
